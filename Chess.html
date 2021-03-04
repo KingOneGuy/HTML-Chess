@@ -36,11 +36,11 @@
 			
 			var pieceBoard = [
 				// 0
-				[pieces.rook, pieces.knight, pieces.bishop, pieces.king,
-					pieces.queen, pieces.bishop, pieces.knight, pieces.rook],
+				[pieces.Brook, pieces.Bknight, pieces.Bbishop, pieces.Bking,
+					pieces.Bqueen, pieces.Bbishop, pieces.Bknight, pieces.Brook],
 				// 1
-				[pieces.pawn, pieces.pawn, pieces.pawn, pieces.pawn,
-					pieces.pawn, pieces.pawn, pieces.pawn, pieces.pawn],
+				[pieces.Bpawn, pieces.Bpawn, pieces.Bpawn, pieces.Bpawn,
+					pieces.Bpawn, pieces.Bpawn, pieces.Bpawn, pieces.Bpawn],
 				// 2
 				[pieces.empty, pieces.empty, pieces.empty, pieces.empty,
 					pieces.empty, pieces.empty, pieces.empty, pieces.empty],
@@ -53,15 +53,20 @@
 				// 5
 				[pieces.empty, pieces.empty, pieces.empty, pieces.empty,
 					pieces.empty, pieces.empty, pieces.empty, pieces.empty],
-				
+				// 6
+				[pieces.Wpawn, pieces.Wpawn, pieces.Wpawn, pieces.Wpawn,
+					pieces.Wpawn, pieces.Wpawn, pieces.Wpawn, pieces.Wpawn],
+				// 7
+				[pieces.Wrook, pieces.Wknight, pieces.Wbishop, pieces.Wking,
+					pieces.Wqueen, pieces.Wbishop, pieces.Wknight, pieces.Wrook]
 			];
 		
 			function drawBoard(){
 				var alternate = true;
 				
-				ctx.fillStyle = global.boardColor1;
+				ctx.fillStyle = colors.boardColor1;
 				ctx.fillRect(0, 0, 200, 200);
-				ctx.fillStyle = global.boardColor2;
+				ctx.fillStyle = colors.boardColor2;
 				ctx.fillRect(201, 201, 400, 400);
 				
 			}
