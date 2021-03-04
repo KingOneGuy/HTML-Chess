@@ -6,12 +6,19 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
+		
+		h1{
+			text-align: center;
+			margin-top: 2%;
+		}
 	</style>
 
 	<body onload="draw()">
 		<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;"> 
 			Your browser does not support this. <!-- if canvas is not supported --> 
 		</canvas>
+		
+		<h1> White's turn. </h1>
 		
 		<script>
 			const canvas = document.getElementById("myCanvas");
