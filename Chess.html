@@ -68,13 +68,18 @@
 				var alternate = true;
 				
 				for(var i = 0; i < BOARD_ROWS; i++){
-					if(alternate){
-						ctx.fillStyle = colors.boardColor1;
-					}else{
-						ctx.fillStyle = colors.boardColor2;
+					for(var v = 0; v < BOARD_COLS; v++){
+						if(alternate){
+							ctx.fillStyle = colors.boardColor1;
+						}else{
+							ctx.fillStyle = colors.boardColor2;
+						}
+						
+						ctx.fillRect(canvas.width*(i/BOARD_ROWS), canvas.height*(v/BOARD_COLS),
+							canvas.width*((i+1)/BOARD_ROWS) , canvas.height*((v+1)/BOARD_COLS));
+							
+						alternate = !alternate;
 					}
-					
-					ctx.fillRect(canvas.width*(i/BOARD_ROWS), 0, canvas.width*((i+1)/BOARD_ROWS) , 50);
 					alternate = !alternate;
 				}
 				
