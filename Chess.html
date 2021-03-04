@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<body onload="drawBoard()">
+		<canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;"> 
+			Your browser does not support this. <!-- if canvas is not supported --> 
+		</canvas>
+		
+		<script>
+			var canvas = document.getElementById("myCanvas");
+			var ctx = canvas.getContext("2d");
+		
+			var colors = {
+				boardColor1: "#51F134",
+				boardColor2: "#CAF083",
+				
+				whitePiece: "#F9FBAA",
+				blackPiece: "#2C2C19"
+			};
+			
+			var pieces = {
+				empty: "E",
+				Wking: "Wking",
+				Wqueen: "Wqueen",
+				Wrook: "Wrook",
+				Wbishop: "Wbishop",
+				Wknight: "Wknight",
+				Wpawn: "Wpawn",
+				
+				Bking: "Bking",
+				Bqueen: "Bqueen",
+				Brook: "Brook",
+				Bbishop: "Bbishop",
+				Bknight: "Bknight",
+				Bpawn: "Bpawn"
+			};
+			
+			var pieceBoard = [
+				// 0
+				[pieces.rook, pieces.knight, pieces.bishop, pieces.king,
+					pieces.queen, pieces.bishop, pieces.knight, pieces.rook],
+				// 1
+				[pieces.pawn, pieces.pawn, pieces.pawn, pieces.pawn,
+					pieces.pawn, pieces.pawn, pieces.pawn, pieces.pawn],
+				// 2
+				[pieces.empty, pieces.empty, pieces.empty, pieces.empty,
+					pieces.empty, pieces.empty, pieces.empty, pieces.empty],
+				// 3
+				[pieces.empty, pieces.empty, pieces.empty, pieces.empty,
+					pieces.empty, pieces.empty, pieces.empty, pieces.empty],
+				// 4
+				[pieces.empty, pieces.empty, pieces.empty, pieces.empty,
+					pieces.empty, pieces.empty, pieces.empty, pieces.empty],
+				// 5
+				[pieces.empty, pieces.empty, pieces.empty, pieces.empty,
+					pieces.empty, pieces.empty, pieces.empty, pieces.empty],
+				
+			];
+		
+			function drawBoard(){
+				var alternate = true;
+				
+				ctx.fillStyle = global.boardColor1;
+				ctx.fillRect(0, 0, 200, 200);
+				ctx.fillStyle = global.boardColor2;
+				ctx.fillRect(201, 201, 400, 400);
+				
+			}
+		</script>
+	</body>
+</html>
